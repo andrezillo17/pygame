@@ -1,0 +1,49 @@
+{{ define "title" }}Grupo Goweb Universidad distrital{{ end }}
+
+{{ define "content" }}
+<h1>Hello {{ .Name }}</h1>
+<header>
+    <hgroup>
+        <h1>Facultades </h1>
+        <h2>Universidad Distrital, GoWeb 2017-1</h2>
+    </hgroup>
+    <nav>
+        <ul>
+            {{range .Facultad}}<li><a href=#{{ . }}>Facultad de {{ . }}</a></li>{{else}}<div><strong>no rows</strong></div>{{end}}
+            
+        </ul>
+    </nav>
+    
+
+<article>
+	<a name="Ingeniería"><h1>Facultad Ingeniería</h1></a>
+    <p>La dependencia Facultad de Ingeniería tiene como misión: La Facultad no es ajena a la Misión de la Universidad, por eso propende por la excelencia académica que en el marco de la autonomía universitaria que la ley le permite. Se fundamente en construir sus propios desarrollos de conocimiento, sus métodos de trabajo investigativo y docente. Autonomía que se ejerce también para construir una tradición y una identidad para abordar y aportar al desarrollo de la ciencia, la cultura y la sociedad. </p>
+</article>
+<article>
+	<a name="Educación"><h1>Facultad de Educación</h1></a>
+    <p>
+        El origen de la Facultad de Ciencias y Educación se remonta a la creación del Departamento de Ciencias Fundamentales en el año de 1972. En 1973, la universidad amplía su cobertura y comienzan a funcionar las carreras de Licenciatura en Física, Química, Biología y Matemáticas. Para el año de 1974 se crearon las Licenciaturas en Idiomas y en Ciencias Sociales y en 1981 inicia la Licenciatura en Educación Básica Primaria. En 1980 cambia el nombre por Centro de Formación y Especialización Docente, en 1988, se crea la Facultad de Ciencias y Educación con los Centros de Ciencias Exactas y Naturales y de Ciencias Humanas y Educación. Actualmente la Facultad cuenta con 10 proyectos curriculares de pregrado, 3 proyectos transversales y 12 de postgrado: 7 especializaciones, 4 maestrías y un doctorado. 
+    </p>
+</article>
+<article>
+	<a name="Artes"><h1>Artes</h1></a>
+    <p>
+    <p>La Universidad Distrital Francisco José de Caldas acoge el Modelo de Administración por Procesos, siendo los Misionales: la Academia o Docencia, la Investigación, y la Extensión. Bajo este Modelo, se identifican procesos y subprocesos de apoyo, cuyo objeto es trabajar de manera coordinada y en cumplimiento de la Política de Calidad, garantizando la eficiencia, eficacia y efectividad en el marco del Acuerdo de Transparencia. </p>
+</article>
+<article>
+	<a name="Tecnologica"><h1>facultad Tecnologica</h1></a>
+    <p>
+    La dependencia Facultad Tecnológica tiene como misión: La Facultad Tecnológica, justifica su existencia por ser un espacio académico y social que posibilita la formación de personas con competencia para la apropiación, adaptación y gestión del conocimiento científico y técnico y los productos de la tecnología, con la intención de impactar positivamente la economía, administración y desarrollo de la organización social del Distrito Capital y la Nación. </p>
+</article>
+<section>
+	<h1>Categories</h1>
+    <ul>
+		{{range .Hobbies}}<li><a href="#">{{ . }}</a></li>{{else}}<div><strong>no rows</strong></div>{{end}}
+    </ul>
+</section>
+
+<footer>
+	<p>&copy; 2017 universidad Distrital - <a href="#">Sitemap</a> | <a href="#">Privacy policy</a>   design by <a href="http://www.udistrital.edu.co" title="web design london">Gustavo Naranjo</a></p>
+</footer>
+
+{{ end }}
